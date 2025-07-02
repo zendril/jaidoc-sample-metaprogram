@@ -1,0 +1,3 @@
+[submodule "modules/jaidoc"]
+	path = modules/jaidoc
+	url = git@github.com:zendril/jaidoc.git
