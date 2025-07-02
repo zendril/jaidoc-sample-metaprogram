@@ -2,7 +2,7 @@
 #import "Compiler";
 #import "File";
 #import "File_Utilities";
-JaidocProcessor :: #import, file "jaidoc_processor.jai"; // Import the library
+JaidocProcessor :: #import "jaidoc"; // Import the library
 
 Command :: enum_flags u8 {
     CLEAN;
@@ -13,51 +13,6 @@ Command :: enum_flags u8 {
 #run {
     context.print_style.default_format_struct.use_long_form_if_more_than_this_many_members = -1;
     context.print_style.default_format_struct.use_newlines_if_long_form = true;
-
-    // info_decl := type_info(Code_Declaration);
-    // print("Code_Declaration Members:\n");
-    // for info_decl.members {
-    //     print("  % : %\n", it.name, it.type);
-    // }
-
-    // info_struct := type_info(Code_Struct);
-    // print("\nCode_Struct Members:\n");
-    // for info_struct.members {
-    //     print("  % : %\n", it.name, it.type);
-    // }
-
-    // info_block := type_info(Code_Block);
-    // print("\nCode_Block Members:\n");
-    // for info_block.members {
-    //     print("  % : %\n", it.name, it.type);
-    // }
-
-    // info_proc := type_info(Code_Procedure_Header);
-    // print("\nCode_Procedure_Header Members:\n");
-    // for info_proc.members {
-    //     print("  % : %\n", it.name, it.type);
-    // }
-
-    // info_decl_flags := type_info(Code_Declaration);
-    // flags_member_type: *Type_Info = null;
-    // for member: info_decl_flags.members {
-    //     if member.name == "flags" {
-    //         flags_member_type = member.type;
-    //         break;
-    //     }
-    // }
-
-    // if flags_member_type {
-    //     print("flags type: %\n", flags_member_type.type);
-    //     info_enum := cast(*Type_Info_Enum) flags_member_type;
-    //     print("\nCode_Declaration.flags enum names:\n");
-    //     for name: info_enum.names {
-    //         print("  %\n", name);
-    //     }
-    // }
-
-    
-
 
     build_options_for_args := get_build_options();
     args := build_options_for_args.compile_time_command_line;
