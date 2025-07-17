@@ -16,6 +16,14 @@ Or clone this repo with submodules:
 git clone --recurse-submodules <repository-url>
 ```
 
+## Updating module
+
+If the upstream module has been updated, you can update the submodule with:
+
+```sh
+git submodule update --remote
+```
+
 ## Usage
 
 ```sh
